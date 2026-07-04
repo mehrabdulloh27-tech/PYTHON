@@ -1,11 +1,34 @@
 Albatta. Quyidagi 10 ta mashq siz bergan ikkita mashq bilan bir xil mavzuda bo'lib, **funksiya**, **`*args`**, **`**kwargs`**, majburiy va ixtiyoriy argumentlardan foydalanishni mashq qilish uchun mo'ljallangan.
 
 1. **Istalgancha sonlarni qabul qilib, ularning o'rta arifmetigini qaytaruvchi funksiya yozing.**
+def mid_sum(*numbers):
+    if not numbers:
+        return 'Kamida 1 ta son kiriting: '
+    result=sum(numbers)/len(numbers)
+    return result
+print(mid_sum(2, 3, 4))
+print(mid_sum())
 
 2. **Istalgancha sonlarni qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing.**
+def max_number(*numbers):
+    if not numbers:
+        return 'Kamida 1 ta son kiriting: '
+    return max(numbers)
+print(max_number(2, 3, 4))
 
 3. **Kitob haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Kitob nomi va muallifi majburiy argument bo'lsin, qolgan ma'lumotlar (nashriyot, yil, sahifalar soni, janri va hokazo) esa ixtiyoriy argument sifatida berilsin.**
-
+print(mid_sum(2, 3, 4))
+print(mid_sum())"""
+"""def max_number(*numbers):
+    if not numbers:
+        return 'Kamida 1 ta son kiriting: '
+    return max(numbers)
+print(max_number(2, 3, 4))"""
+def book_info(author, name_book, **information):
+    information['author']=author
+    information['name_book']=name_book
+    return information
+print(book_info('Said Ahmad', 'Tushda kechgan umrlar', nashr=1986, janr='roman') )
 4. **Avtomobil haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Marka va model majburiy argument, qolgan ma'lumotlar (`rang`, `yil`, `narx`, `dvigatel` va boshqalar) ixtiyoriy bo'lsin.**
 
 5. **Istalgancha ismlarni qabul qilib, ularni alifbo tartibida ro'yxat ko'rinishida qaytaruvchi funksiya yozing.**
