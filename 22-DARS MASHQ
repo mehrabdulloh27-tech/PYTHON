@@ -1,0 +1,23 @@
+Albatta. Quyidagi 10 ta mashq siz bergan ikkita mashq bilan bir xil mavzuda bo'lib, **funksiya**, **`*args`**, **`**kwargs`**, majburiy va ixtiyoriy argumentlardan foydalanishni mashq qilish uchun mo'ljallangan.
+
+1. **Istalgancha sonlarni qabul qilib, ularning o'rta arifmetigini qaytaruvchi funksiya yozing.**
+
+2. **Istalgancha sonlarni qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing.**
+
+3. **Kitob haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Kitob nomi va muallifi majburiy argument bo'lsin, qolgan ma'lumotlar (nashriyot, yil, sahifalar soni, janri va hokazo) esa ixtiyoriy argument sifatida berilsin.**
+
+4. **Avtomobil haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Marka va model majburiy argument, qolgan ma'lumotlar (`rang`, `yil`, `narx`, `dvigatel` va boshqalar) ixtiyoriy bo'lsin.**
+
+5. **Istalgancha ismlarni qabul qilib, ularni alifbo tartibida ro'yxat ko'rinishida qaytaruvchi funksiya yozing.**
+
+6. **Xodim haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Ism va lavozim majburiy argument bo'lsin, qolgan ma'lumotlar (`maosh`, `telefon`, `email`, `bo'lim` va boshqalar) ixtiyoriy berilsin.**
+
+7. **Istalgancha matn (satr) qabul qilib, ularning umumiy belgilar sonini qaytaruvchi funksiya yozing.**
+
+8. **Mahsulot haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Mahsulot nomi va narxi majburiy argument bo'lsin, qolgan ma'lumotlar (`rang`, `o'lcham`, `ishlab chiqaruvchi`, `kafolat muddati` va boshqalar) ixtiyoriy bo'lsin.**
+
+9. **Istalgancha sonlarni qabul qilib, faqat juft sonlardan iborat yangi ro'yxatni qaytaruvchi funksiya yozing.**
+
+10. **Foydalanuvchi profili haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Login va parol majburiy argument bo'lsin, qolgan ma'lumotlar (`email`, `telefon`, `manzil`, `tug'ilgan sana` va boshqalar) ixtiyoriy argument sifatida berilsin.**
+
+Bu 10 ta mashq sizning dastlabki misollaringiz kabi **`*args`** va **`**kwargs`** mavzusini mustahkamlash uchun mos keladi.
