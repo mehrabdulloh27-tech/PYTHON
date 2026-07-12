@@ -77,7 +77,23 @@ product=product_info('shirin', '1 kg 80 000 sum', date_produce="11.07.2026")
 print(product)
 
 9. **Istalgancha sonlarni qabul qilib, faqat juft sonlardan iborat yangi ro'yxatni qaytaruvchi funksiya yozing.**
+def even_numbers(*numbers):
+    if not numbers:
+        return 'Kamida 1 ta son kiriting!'
+    new_numbers=[]
+    for x in numbers:
+        if x%2==0:
+            new_numbers.append(x)
+    return new_numbers
+numbers=even_numbers(8, 5, 6)
+print(numbers)
 
 10. **Foydalanuvchi profili haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Login va parol majburiy argument bo'lsin, qolgan ma'lumotlar (`email`, `telefon`, `manzil`, `tug'ilgan sana` va boshqalar) ixtiyoriy argument sifatida berilsin.**
+def profile_user(login, password, **information):
+    information['login']=login
+    information['password']=password
+    return information
+information=profile_user('abdu_abdulloh', 'abduganijon2204@', years_old='24 years old', profession='customs officer', education='economic' )
+print(information)
 
 Bu 10 ta mashq sizning dastlabki misollaringiz kabi **`*args`** va **`**kwargs`** mavzusini mustahkamlash uchun mos keladi.
