@@ -32,12 +32,49 @@ print(book_info('Said Ahmad', 'Tushda kechgan umrlar', nashr=1986, janr='roman')
 4. **Avtomobil haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Marka va model majburiy argument, qolgan ma'lumotlar (`rang`, `yil`, `narx`, `dvigatel` va boshqalar) ixtiyoriy bo'lsin.**
 
 5. **Istalgancha ismlarni qabul qilib, ularni alifbo tartibida ro'yxat ko'rinishida qaytaruvchi funksiya yozing.**
+"""def name_order(*names):
+	if len(names)<2:
+		return 'Iltimos 2 tadan kup ism kiriting!'
+	new_names=[]
+	for name in names:
+		new_names.append(name.capitalize())
+	new_names.sort()
+	return new_names
+names=name_order('abdugani', 'islom', 'qodir', 'farangiz')
+print(names)"""
 
 6. **Xodim haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Ism va lavozim majburiy argument bo'lsin, qolgan ma'lumotlar (`maosh`, `telefon`, `email`, `bo'lim` va boshqalar) ixtiyoriy berilsin.**
+"""def stuff_info(name, position, **information):
+	information['name']=name.capitalize()
+	information['position']=position
+	return information
+stuff1=stuff_info("abdug'ani", 
+	"inspector", 
+	old='24 years old', 
+	birth_year='22.04.2002 year', 
+	birth_place='Navoiy district, Khatirchi region')
+print(stuff1)
+"""
 
 7. **Istalgancha matn (satr) qabul qilib, ularning umumiy belgilar sonini qaytaruvchi funksiya yozing.**
-
+def number_point(*text):
+	sum=0
+	if not text:
+		return 'ILtimos kamida 1 ta tekst kiriting!'
+	for x in text:
+		sum+=len(x)
+	return sum
+text1=number_point('abdugani', 'farangiz')
+text2=number_point()
+print(text2)
+print(text1)
 8. **Mahsulot haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya yozing. Mahsulot nomi va narxi majburiy argument bo'lsin, qolgan ma'lumotlar (`rang`, `o'lcham`, `ishlab chiqaruvchi`, `kafolat muddati` va boshqalar) ixtiyoriy bo'lsin.**
+def product_info(name, cost, **information):
+	information['name']=name
+	information['cost']=cost
+	return information
+product=product_info('shirin', '1 kg 80 000 sum', date_produce="11.07.2026")
+print(product)
 
 9. **Istalgancha sonlarni qabul qilib, faqat juft sonlardan iborat yangi ro'yxatni qaytaruvchi funksiya yozing.**
 
