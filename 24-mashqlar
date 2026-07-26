@@ -132,7 +132,14 @@ sonlar = [45, 120, 300, 90, 150, 75]
 [120, 300, 150]
 ```
 
----
+---sonlar=[]
+while True:
+    son=input('Bir nechta son kiriting(tuxtash uchun stop)')
+    if son.lower()=='stop':
+        break
+    sonlar.append(int(son))
+sonlar_100katta=list(filter(lambda son:son>100, sonlar))
+print(sonlar_100katta)
 
 ## 9-mashq. Sonlarning kubini toping (`map()`)
 
