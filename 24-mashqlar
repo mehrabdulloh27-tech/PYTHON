@@ -1,0 +1,202 @@
+Quyida **lambda (nomsiz funksiya), `map()` va `filter()`** mavzularini mustahkamlash uchun **10 ta amaliy mashq** berilgan. Mashqlar osondan murakkabga qarab tuzilgan. **Javob kodlari berilmagan**, ularni o'zingiz bajarishga harakat qiling.
+
+---
+
+## 1-mashq. Sonlarning kvadratini toping (`map()` + `lambda`)
+
+Berilgan ro'yxatdagi barcha sonlarning kvadratini toping.
+
+```python
+sonlar = [2, 4, 6, 8, 10]
+```
+
+**Natija:**
+
+```python
+[4, 16, 36, 64, 100]
+```
+
+---
+
+## 2-mashq. Ismlarni katta harf bilan yozing (`map()` + `lambda`)
+
+Berilgan ismlarning birinchi harfini katta harfga o'tkazing.
+
+```python
+ismlar = ["ali", "vali", "hasan", "husan"]
+```
+
+**Natija:**
+
+```python
+["Ali", "Vali", "Hasan", "Husan"]
+```
+
+---
+
+## 3-mashq. Sonlarni 5 ga ko'paytiring (`map()`)
+
+Berilgan sonlarning har birini 5 ga ko'paytiring.
+
+```python
+sonlar = [3, 7, 9, 12]
+```
+
+**Natija:**
+
+```python
+[15, 35, 45, 60]
+```
+
+---
+
+## 4-mashq. Juft sonlarni ajrating (`filter()` + `lambda`)
+
+Ro'yxatdan faqat juft sonlarni ajratib oling.
+
+```python
+sonlar = [4, 7, 10, 13, 18, 21, 24]
+```
+
+**Natija:**
+
+```python
+[4, 10, 18, 24]
+```
+
+---
+
+## 5-mashq. Toq sonlarni ajrating (`filter()`)
+
+Berilgan ro'yxatdan faqat toq sonlarni chiqaring.
+
+```python
+sonlar = [11, 20, 31, 42, 55, 60]
+```
+
+**Natija:**
+
+```python
+[11, 31, 55]
+```
+
+---toq_sonlar=list(filter(lambda x:x%2!=0,range(10)))
+print(toq_sonlar)
+
+
+## 6-mashq. 5 harfdan uzun ismlarni ajrating (`filter()`)
+
+Berilgan ismlar ichidan uzunligi 5 ta harfdan katta bo'lganlarini chiqaring.
+
+```python
+ismlar = ["Ali", "Muhammad", "Vali", "Sardor", "Aziza", "Jasur"]
+```
+
+**Natija:**
+
+```python
+["Muhammad", "Sardor", "Aziza"]
+```
+ismlar=['abdugani','barno', 'ramazon']
+katta5_ismlar=list(filter(lambda x:5<len(x),ismlar))
+print(katta5_ismlar)
+---
+
+## 7-mashq. Manfiy sonlarni musbatga aylantiring (`map()`)
+
+Ro'yxatdagi barcha sonlarni musbat ko'rinishga o'tkazing.
+
+```python
+sonlar = [-3, -7, 5, -12, 8]
+```
+
+**Natija:**
+
+```python
+[3, 7, 5, 12, 8]
+```
+
+---
+
+## 8-mashq. 100 dan katta sonlarni ajrating (`filter()`)
+
+Berilgan ro'yxatdan faqat 100 dan katta sonlarni chiqaring.
+
+```python
+sonlar = [45, 120, 300, 90, 150, 75]
+```
+
+**Natija:**
+
+```python
+[120, 300, 150]
+```
+
+---
+
+## 9-mashq. Sonlarning kubini toping (`map()`)
+
+Ro'yxatdagi barcha sonlarning kubini hisoblang.
+
+```python
+sonlar = [1, 2, 3, 4, 5]
+```
+
+**Natija:**
+
+```python
+[1, 8, 27, 64, 125]
+```
+
+---
+
+## 10-mashq. Murakkab mashq (`filter()` + `map()`)
+
+Berilgan ro'yxatdan:
+
+* Avval faqat **juft sonlarni** ajrating.
+* So'ngra ularning **kvadratini** hisoblang.
+
+```python
+sonlar = [2, 5, 8, 11, 14, 17, 20]
+```
+
+**Natija:**
+
+```python
+[4, 64, 196, 400]
+```
+
+---
+
+### ⭐ Qo'shimcha (Challenge)
+
+Quyidagi ro'yxatdan:
+
+```python
+talabalar = [
+    ("Ali", 72),
+    ("Vali", 45),
+    ("Hasan", 88),
+    ("Husan", 59),
+    ("Aziza", 95),
+    ("Dilnoza", 61)
+]
+```
+
+**Vazifa:**
+
+1. `filter()` yordamida **60 va undan yuqori ball olgan** talabalarni ajrating.
+2. `map()` yordamida ularning faqat **ismlarini** chiqaring.
+
+**Natija:**
+
+```python
+["Ali", "Hasan", "Aziza", "Dilnoza"]
+```
+
+Bu 10 ta mashqni bajarganingizdan so'ng, siz **`lambda`**, **`map()`** va **`filter()`** funksiyalarini bemalol ishlata oladigan darajaga chiqasiz. Keyingi bosqich sifatida ushbu mavzulardan **imtihon uslubidagi 20 ta murakkab mashq** ham tayyorlab berishim mumkin.
+sonlar=[3,-5,8,-7,9,-6,-7]
+musbat_sonlar=list(filter(lambda x:x>0,sonlar))
+kv_sonlar=list(map(lambda x:x**2,musbat_sonlar))
+print(kv_sonlar)
