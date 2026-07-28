@@ -1,0 +1,317 @@
+Albatta! Bu mashq Pythonni o'rganishda juda foydali. Avval kodni yozaman, keyin uni **birma-bir** tahlil qilamiz.
+
+## Son topish o'yini
+
+```python
+import random
+
+yashirin_son = random.randint(1, 100)
+
+print("Men 1 dan 100 gacha son o'yladim.")
+print("Uni topishga harakat qiling!")
+
+urinishlar = 0
+
+while True:
+    taxmin = int(input("Son kiriting: "))
+    urinishlar += 1
+
+    if taxmin > yashirin_son:
+        print("Kichikroq son kiriting!")
+
+    elif taxmin < yashirin_son:
+        print("Kattaroq son kiriting!")
+
+    else:
+        print(f"Tabriklayman! Siz {urinishlar} ta urinishda topdingiz.")
+        break
+```
+
+---
+
+# Endi kodni birma-bir tahlil qilamiz.
+
+## 1-qator
+
+```python
+import random
+```
+
+### Vazifasi
+
+Pythonning **`random` modulini** chaqiradi.
+
+Bu modul tasodifiy sonlar yaratish uchun ishlatiladi.
+
+Masalan:
+
+```python
+random.randint(1, 10)
+```
+
+natija:
+
+```text
+4
+```
+
+Keyingi safar:
+
+```text
+9
+```
+
+Har safar boshqa son chiqishi mumkin.
+
+---
+
+## 2-qator
+
+```python
+yashirin_son = random.randint(1, 100)
+```
+
+Bu eng muhim qatorlardan biri.
+
+`randint(1,100)` degani:
+
+> 1 dan 100 gacha bo'lgan tasodifiy butun son tanla.
+
+Masalan, kompyuter:
+
+```text
+63
+```
+
+ni tanlashi mumkin.
+
+Bu son **`yashirin_son`** o'zgaruvchisida saqlanadi.
+
+---
+
+## 3- va 4-qator
+
+```python
+print("Men 1 dan 100 gacha son o'yladim.")
+print("Uni topishga harakat qiling!")
+```
+
+Foydalanuvchiga ko'rsatma beradi.
+
+Natija:
+
+```text
+Men 1 dan 100 gacha son o'yladim.
+Uni topishga harakat qiling!
+```
+
+---
+
+## 5-qator
+
+```python
+urinishlar = 0
+```
+
+Bu o'zgaruvchi foydalanuvchi necha marta taxmin qilganini sanaydi.
+
+Masalan:
+
+Birinchi taxmin →
+
+```text
+urinishlar = 1
+```
+
+Ikkinchi taxmin →
+
+```text
+urinishlar = 2
+```
+
+---
+
+## 6-qator
+
+```python
+while True:
+```
+
+Bu **cheksiz sikl**.
+
+U foydalanuvchi to'g'ri javob topmaguncha davom etadi.
+
+---
+
+## 7-qator
+
+```python
+taxmin = int(input("Son kiriting: "))
+```
+
+Bu yerda:
+
+1. foydalanuvchi son kiritadi;
+2. `input()` matn qaytaradi;
+3. `int()` uni butun songa aylantiradi.
+
+Masalan:
+
+```text
+Son kiriting: 45
+```
+
+Natija:
+
+```python
+taxmin = 45
+```
+
+---
+
+## 8-qator
+
+```python
+urinishlar += 1
+```
+
+Bu:
+
+```python
+urinishlar = urinishlar + 1
+```
+
+ning qisqa yozilishi.
+
+Har safar foydalanuvchi son kiritsa, urinishlar soni bittaga ortadi.
+
+---
+
+## 9-qator
+
+```python
+if taxmin > yashirin_son:
+```
+
+Agar foydalanuvchi katta son aytsa,
+
+masalan:
+
+```text
+Kompyuter = 63
+Foydalanuvchi = 80
+```
+
+unda:
+
+```text
+80 > 63
+```
+
+Shuning uchun:
+
+```python
+print("Kichikroq son kiriting!")
+```
+
+chiqadi.
+
+---
+
+## 10-qator
+
+```python
+elif taxmin < yashirin_son:
+```
+
+Agar foydalanuvchi kichik son kiritsa,
+
+masalan:
+
+```text
+Kompyuter = 63
+Foydalanuvchi = 40
+```
+
+unda:
+
+```text
+40 < 63
+```
+
+Natija:
+
+```text
+Kattaroq son kiriting!
+```
+
+---
+
+## 11-qator
+
+```python
+else:
+```
+
+Bu holat faqat bitta vaziyatda ishlaydi:
+
+```text
+taxmin == yashirin_son
+```
+
+Masalan:
+
+```text
+63 == 63
+```
+
+unda:
+
+```python
+print(f"Tabriklayman! Siz {urinishlar} ta urinishda topdingiz.")
+```
+
+ekranga chiqariladi.
+
+---
+
+## 12-qator
+
+```python
+break
+```
+
+Bu siklni to'xtatadi.
+
+Agar `break` bo'lmasa, o'yin to'g'ri javob topilgandan keyin ham davom etaveradi.
+
+---
+
+# Misol
+
+Kompyuter **37** sonini o'yladi.
+
+```text
+Men 1 dan 100 gacha son o'yladim.
+Uni topishga harakat qiling!
+
+Son kiriting: 60
+Kichikroq son kiriting!
+
+Son kiriting: 20
+Kattaroq son kiriting!
+
+Son kiriting: 37
+Tabriklayman! Siz 3 ta urinishda topdingiz.
+```
+
+---
+
+Bu o'yinni tushunib olganingizdan so'ng, uni keyingi bosqichga olib chiqish mumkin. Masalan:
+
+* foydalanuvchining ismini so'rash;
+* nechta urinish mumkinligini cheklash (masalan, 7 ta);
+* rekord natijani saqlash;
+* "Yana o'ynaysizmi?" degan menyu qo'shish.
+
+Bu qo'shimchalar orqali siz `while`, `if`, `random`, `function`, `list` va `file` bilan ishlashni ham mashq qilasiz.
