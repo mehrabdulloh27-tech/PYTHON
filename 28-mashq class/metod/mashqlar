@@ -1,0 +1,145 @@
+"""class futbolchi:
+	def __init__(self,ism,jamoa,raqam,pozitsiya,yosh):
+		self.ism=ism
+		self.jamoa=jamoa
+		self.raqam=raqam
+		self.pozitsiya=pozitsiya
+		self.yosh=yosh
+futbolchi1=futbolchi("Abdugani","Manchestercity",28,"himoyachi",20)
+futbolchi2=futbolchi("Bobur","Real Madrid",22,"hujumchi",24)
+futbolchi3=futbolchi("Sherzod","Real Madrid", 25,"zahira",29)
+futbolchi4=futbolchi("Alisher","Manchestercity",24,"darvozabon",25)
+futbolchi5=futbolchi("Sardor","PSG",21,"hujumchi",20)
+futbolchilar=[futbolchi1,futbolchi2,futbolchi3,futbolchi4,futbolchi5]
+print("Futbolchilar ro'yhati: ")
+for x in futbolchilar:
+	print(x.ism)
+	#yosh_25_kichik=[]
+print("25 yoshdan kichik futbolchilar: ")
+for x in futbolchilar:
+	if int(x.yosh)<25:
+		print(x.ism)
+print("Hujumchi bo'lgan futbolchilar: ")
+for x in futbolchilar:
+	if x.pozitsiya=="hujumchi":
+		print(x.ism)
+eng_katta_futbolchilar=[]
+eng_katta_futbolchi=futbolchilar[0]
+for x in futbolchilar:
+	if x.yosh>eng_katta_futbolchi.yosh:
+		eng_katta_futbolchi=x
+print("\n=== Eng katta yoshdagi futbolchilar ===")
+for x in futbolchilar:
+    if x.yosh == eng_katta_futbolchi.yosh:
+        print(f"{x.ism} - {x.yosh} yosh")
+print("Manchester city jamoasidagi fulbolchilar: ")
+for x in futbolchilar:
+	if x.jamoa=="Manchestercity":
+		print(x.ism)
+print("Real Madrid jamoasidagi fulbolchilar: ")
+for x in futbolchilar:
+	if x.jamoa=="Real Madrid":
+		print(x.ism)
+print("PSG jamoasidagi fulbolchilar: ")
+for x in futbolchilar:
+	if x.jamoa=="PSG":
+		print(x.ism)"""
+"""elif x.yosh==eng_katta_futbolchi.yosh:
+					eng_katta_futbolchilar.append(x)
+			
+			print(f"Eng katta yoshli futbochi: {eng_katta_futbolchi.ism}- {eng_katta_futbolchi.yosh} yoshda")
+			"""
+"""Barcha kitoblar.
+Narxi 100000 so'mdan qimmat kitoblar.
+2020-yildan keyin nashr qilingan kitoblar.
+Eng qimmat kitob.
+Eng qimmat narxdagi barcha kitoblar"""
+"""class Kitob:
+	def __init__(self,nomi,muallifi,sahifalar_soni,narxi,nashr_yili):
+		self.nomi=nomi
+		self.muallifi=muallifi
+		self.sahifalar_soni=sahifalar_soni
+		self.narxi=narxi
+		self.nashr_yili=nashr_yili
+kitob1=Kitob("Ufq","Said Ahmad",650,200000,2012)
+kitob2=Kitob("Izlash","Umarbek",350,50000,2024)
+kitob3=Kitob("Odam bo'lish qiyin","O'lmas Umarebekov",150,40000,2023)
+kitob4=Kitob("Ikki eshik orasi","O'tkir Hoshimov",450,200000,2014)
+kitob5=Kitob("Otamdan qolgan dalalar","Sherali ismoilov",80,65000,2003)
+kitoblar=[kitob1,kitob2,kitob3,kitob4,kitob5]
+print("\n==Barcha kitoblar==")
+for x in kitoblar:
+	print(f"{x.nomi} kitobining muallifi-{x.muallifi} ")
+print("\n==Narxi 100 000 so'mdan qimmat kitoblar== ")
+for x in kitoblar:
+	if x.narxi>100000:
+		print(f"{x.nomi}-{x.narxi} so'm")
+
+
+
+print("\n==2020-yildan keyin nashr qilingan kitoblar==") 
+for x in kitoblar:
+	if x.nashr_yili>2020:
+		print(f"{x.nomi}-{x.nashr_yili}-yili nashr qilingan")
+print("\n==Eng qimmat kitoblar==")
+eng_qimmat=kitoblar[0]
+for x in kitoblar:
+	if x.narxi>eng_qimmat.narxi:
+		eng_qimmat=x
+for x in kitoblar:
+	if x.narxi==eng_qimmat.narxi:
+		print(x.nomi)
+"""
+"""class Xodim:
+	def __init__(self,ism,lavozim,bulim,maosh,ish_staji):
+		self.ism=ism
+		self.lavozim=lavozim
+		self.bulim=bulim
+		self.maosh=maosh
+		self.ish_staji=ish_staji
+xodim1=Xodim("Abdugani","Yurist","Yuridikt bo'lim",15000000,6)
+xodim2=Xodim("Sherzod","Buxgalter","Moliya iqtisodiyot bo'limi",19000000,12)
+xodim3=Xodim("Ilhom","Tezkor navbatchi","Navbatchilik qismi bo'limi",22000000,15)
+xodim4=Xodim("Nazar","Oper","Kontrabanda bo'limi",25000000,19)
+xodim5=Xodim("Maqsud", "Axborot texnolog","ATB bo'limi",25000000,10)
+xodim6=Xodim("O'tkir", "Buxgalter","Moliya iqtisodiyot bo'limi",25000000,22)
+xodimlar=[xodim1,xodim2,xodim3,xodim4,xodim5,xodim6]
+print("\n===Xodimlar ro'yhati===")
+for x in xodimlar:
+	print(x.ism)
+print("\n===5 yildan ko'p stajga ega xodimlar===")
+for x in xodimlar:
+	if x.ish_staji>5:
+		print(x.ism)
+print("\n===Maoshi 10 000 000 so'mdan yuqori xodimlar===")
+for x in xodimlar:
+	if x.maosh>1000000:
+		print(x.ism)
+print("===Eng yuqori maosh oladigan xodimlar===")
+eng_yuqori=xodimlar[0]
+for x in xodimlar:
+	if x.maosh>eng_yuqori.maosh:
+		eng_yuqori=x
+for x in xodimlar:
+	if x.maosh==eng_yuqori.maosh:
+		print(x.ism)
+print("===Yuridikt bo'lim xodimlari===")
+for x in xodimlar:
+	if x.bulim=="Yuridikt bo'lim":
+		print(x.ism)
+print("===Moliya iqtisodiyot bo'limi xodimlari===")
+for x in xodimlar:
+	if x.bulim=="Moliya iqtisodiyot bo'limi":
+		print(x.ism)
+print("===Navbatchilik qismi bo'limi xodimlari===")
+for x in xodimlar:
+	if x.bulim=="Navbatchilik qismi bo'limi":
+		print(x.ism)
+print("===Kontrabanda bo'limi xodimlari===")
+for x in xodimlar:
+	if x.bulim=="Kontrabanda bo'limi":
+		print(x.ism)
+print("===ATB bo'limi xodimlari===")
+for x in xodimlar:
+	if x.bulim=="ATB bo'limi":
+		print(x.ism)"""
