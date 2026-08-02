@@ -143,6 +143,146 @@ print("===ATB bo'limi xodimlari===")
 for x in xodimlar:
 	if x.bulim=="ATB bo'limi":
 		print(x.ism)"""
+Albatta. Sizning hozirgi darajangizni hisobga olib, quyidagi 5 ta mashqni tuzdim. Bu mashqlar **klass yaratish**, **obyektlar bilan ishlash**, **for**, **if**, **algoritmik fikrlash** va keyingi OOP mavzulariga tayyorlaydi.
+
+> **Shart:** Hozircha `max()`, `min()`, `filter()`, `lambda()` ishlatmang. Faqat `class`, `for`, `if`, `list` va o'zingiz yozgan algoritmlardan foydalaning.
+
+---
+
+# 1-mashq. Kitoblar kutubxonasi
+
+`Kitob` nomli klass yarating.
+
+Xususiyatlari:
+
+* nomi
+* muallifi
+* sahifalar_soni
+* narxi
+* nashr_yili
+
+Kamida **5 ta kitob** yarating.
+
+Quyidagilarni chiqaring:
+
+1. Barcha kitoblar.
+2. Narxi 100000 so'mdan qimmat kitoblar.
+3. 2020-yildan keyin nashr qilingan kitoblar.
+4. Eng qimmat kitob.
+5. Eng qimmat narxdagi barcha kitoblar.
+
+---
+
+# 2-mashq. Xodimlar
+
+`Xodim` nomli klass yarating.
+
+Xususiyatlari:
+
+* ism
+* lavozim
+* bo'lim
+* maosh
+* ish_staji
+
+Kamida **6 ta xodim** yarating.
+
+Topshiriqlar:
+
+1. Barcha xodimlar.
+2. 5 yildan ortiq ishlaganlar.
+3. Maoshi 10 milliondan yuqori xodimlar.
+4. Eng katta maosh oladigan xodim.
+5. Eng katta maosh oladigan barcha xodimlar.
+6. Bir xil bo'limdagi xodimlarni chiqaring.
+
+---
+
+# 3-mashq. Universitet talabalari
+
+`Talaba` klassi.
+
+Xususiyatlari:
+
+* ism
+* fakultet
+* kurs
+* GPA
+* stipendiya
+
+Kamida **6 ta talaba** yarating.
+
+Topshiriqlar:
+
+1. Barcha talabalar.
+2. 3-kurs talabalari.
+3. GPA 4.5 dan yuqori talabalar.
+4. Eng yuqori GPA.
+5. Eng yuqori GPA olgan barcha talabalar.
+6. Stipendiya oladigan talabalar.
+
+---
+
+# 4-mashq. Kompyuter do'koni
+
+`Kompyuter` klassi.
+
+Xususiyatlari:
+
+* brend
+* model
+* protsessor
+* RAM
+* narx
+
+Kamida **5 ta kompyuter** yarating.
+
+Topshiriqlar:
+
+1. Barcha kompyuterlar.
+2. 16 GB va undan katta RAM.
+3. Intel protsessorli kompyuterlar.
+4. Eng qimmat kompyuter.
+5. Eng qimmat narxdagi barcha kompyuterlar.
+
+---
+
+# 5-mashq. Kinolar bazasi
+
+`Film` klassi.
+
+Xususiyatlari:
+
+* nomi
+* janri
+* reyting
+* davomiyligi
+* yil
+
+Kamida **7 ta film** yarating.
+
+Topshiriqlar:
+
+1. Barcha filmlar.
+2. Reytingi 8.5 dan yuqori filmlar.
+3. 2022-yildan keyingi filmlar.
+4. Eng yuqori reytingli film.
+5. Eng yuqori reytingli barcha filmlar.
+6. Bir xil janrdagi filmlarni alohida chiqaring.
+
+---
+
+# Muhim qoida
+
+Har bir mashqda quyidagi algoritmlarni **o'zingiz yozasiz**:
+
+* ✅ Eng katta qiymatni topish.
+* ✅ Eng katta qiymatga ega barcha obyektlarni topish.
+* ✅ Ma'lum xususiyat bo'yicha guruhlash.
+* ✅ `for` va `if` bilan qidirish.
+
+Bu mashqlarni bemalol bajara olsangiz, siz **klass yaratish va obyektlar bilan ishlash** mavzusini mustahkam o'zlashtirgan bo'lasiz va keyingi bosqich — **klass metodlari (`def` metodlar)**ga o'tishga tayyor bo'lasiz.
+
 class Talaba			:
 	def __init__(self,ism,fakultet,kurs,GPA,Stependiya):
 		self.ism=ism
