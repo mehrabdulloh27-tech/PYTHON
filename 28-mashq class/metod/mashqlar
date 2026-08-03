@@ -283,56 +283,40 @@ Har bir mashqda quyidagi algoritmlarni **o'zingiz yozasiz**:
 
 Bu mashqlarni bemalol bajara olsangiz, siz **klass yaratish va obyektlar bilan ishlash** mavzusini mustahkam o'zlashtirgan bo'lasiz va keyingi bosqich — **klass metodlari (`def` metodlar)**ga o'tishga tayyor bo'lasiz.
 
-class Talaba			:
-	def __init__(self,ism,fakultet,kurs,GPA,Stependiya):
-		self.ism=ism
-		self.fakultet=fakultet
-		self.kurs=kurs
-		self.GPA=GPA
-		self.Stependiya=Stependiya
-talaba1=Talaba("Abdugani","Bojxona ishi",4,3.6,640000)
-talaba2=Talaba("Sherzod","Bojxona huquqi",3,4.6,800000)
-talaba3=Talaba("Ilhom","Bojxona ishi rus",2,4.9,940000)
-talaba4=Talaba("Nazar","Bojxona ishi",4,3.2,440000)
-talaba5=Talaba("Maqsud", "Bojxona huquqi",2,3.2,300000)
-talaba6=Talaba("O'tkir", "Bojxona huquqi",3,5,1000000)
+class Talaba         :
+   def __init__(self,ism,fakultet,kurs,GPA,Stependiya):
+      self.ism=ism
+      self.fakultet=fakultet
+      self.kurs=kurs
+      self.GPA=GPA
+      self.Stependiya=Stependiya
+talaba1=Talaba("Abdugani","Bojxona ishi",4,3.6,"bor")
+talaba2=Talaba("Sherzod","Bojxona huquqi",3,4.6,"yuq")
+talaba3=Talaba("Ilhom","Bojxona ishi rus",2,4.9,"yuq")
+talaba4=Talaba("Nazar","Bojxona ishi",4,3.2,"bor")
+talaba5=Talaba("Maqsud", "Bojxona huquqi",2,3.2,"bor")
+talaba6=Talaba("O'tkir", "Bojxona huquqi",3,5,"yuq")
 talabalar=[talaba1,talaba2,talaba3,talaba4,talaba5,talaba6]
 print("\n===Talabalar ro'yhati===")
 for x in talabalar:
-	print(x.ism)
-print("\n===3-kurs ===")
-for x in xodimlar:
-	if x.ish_staji>5:
-		print(x.ism)
-print("\n===Maoshi 10 000 000 so'mdan yuqori xodimlar===")
-for x in xodimlar:
-	if x.maosh>1000000:
-		print(x.ism)
-print("===Eng yuqori maosh oladigan xodimlar===")
-eng_yuqori=xodimlar[0]
-for x in xodimlar:
-	if x.maosh>eng_yuqori.maosh:
-		eng_yuqori=x
-for x in xodimlar:
-	if x.maosh==eng_yuqori.maosh:
-		print(x.ism)
-print("===Yuridikt bo'lim xodimlari===")
-for x in xodimlar:
-	if x.bulim=="Yuridikt bo'lim":
-		print(x.ism)
-print("===Moliya iqtisodiyot bo'limi xodimlari===")
-for x in xodimlar:
-	if x.bulim=="Moliya iqtisodiyot bo'limi":
-		print(x.ism)
-print("===Navbatchilik qismi bo'limi xodimlari===")
-for x in xodimlar:
-	if x.bulim=="Navbatchilik qismi bo'limi":
-		print(x.ism)
-print("===Kontrabanda bo'limi xodimlari===")
-for x in xodimlar:
-	if x.bulim=="Kontrabanda bo'limi":
-		print(x.ism)
-print("===ATB bo'limi xodimlari===")
-for x in xodimlar:
-	if x.bulim=="ATB bo'limi":
-		print(x.ism)
+   print(x.ism)
+print("\n===3-kurs===")
+for x in talabalar:
+   if x.kurs==3:
+      print(x.ism)
+print("===GPA bali 4.5 da yuqori bo'lgan talabalar===")
+for x in talabalar:
+   if x.GPA>4.5:
+      print(x.ism)
+print("\n===Eng yuqori GPA bal olgan talabalar===")
+eng_yuqori=talabalar[0]
+for x in talabalar:
+   if x.GPA>eng_yuqori.GPA:
+      eng_yuqori=x
+for x in talabalar:
+   if x.GPA==eng_yuqori.GPA:
+      print(x.ism)
+print("===Stependiya oladigan talabalar===")
+for x in talabalar:
+   if x.Stependiya=="bor":
+      print(x.ism)
