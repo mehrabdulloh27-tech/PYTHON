@@ -51,6 +51,42 @@ BMW X5 2024-yilda ishlab chiqarilgan.
 Kamida **5 ta avtomobil** yarating va har bir obyekt uchun ikkala metodni ham chaqiring.
 
 ---
+class Avtomobil:
+	def __init__(self,brend, model,rang,narx,yil):
+		self.brend=brend
+		self.model=model
+		self.rang=rang
+		self.narx=narx
+		self.yil=yil
+	def malumot(self):
+		print(f"""
+brend:{self.brend}
+model:{self.model}
+rang:{self.rang}
+narx:{self.narx}
+yil:{self.yil}
+
+----------------------
+""")
+	def yosh(self):
+		print(f"""{self.brend} {self.model} {self.yil}-yilda ishlab chiqarilgan
+			""")
+avto1 = Avtomobil("BMW", "X5", "Oq", 65000, 2024)
+avto2 = Avtomobil("Mercedes", "E200", "Qora", 55000, 2023)
+avto3 = Avtomobil("Toyota", "Camry", "Kulrang", 38000, 2022)
+avto4 = Avtomobil("Chevrolet", "Malibu 2", "Oq", 30000, 2021)
+avto5 = Avtomobil("Kia", "K5", "Ko'k", 35000, 2024)
+avto1.malumot()
+avto2.malumot()
+avto3.malumot()
+avto4.malumot()
+avto5.malumot()
+avto1.yosh()
+avto2.yosh()
+avto3.yosh()
+avto4.yosh()
+avto5.yosh()
+
 
 # 2-mashq. Talaba
 
