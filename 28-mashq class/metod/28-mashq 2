@@ -1,0 +1,251 @@
+Juda yaxshi. Siz **klass yaratish** va **obyektlar bilan ishlash**ni yaxshi o'zlashtirdingiz. Endi navbat **Obyektning metodlariga murojaat qilish** mavzusiga.
+
+Bu mashqlarda siz:
+
+* `def` metod yozasiz.
+* `self` bilan ishlaysiz.
+* `obyekt.metod()` ko'rinishida metodlarni chaqirasiz.
+
+> **Shart:** Hozircha metodlar argument qabul qilmaydi. Faqat `self` ishlatiladi.
+
+---
+
+# 1-mashq. Avtomobil
+
+`Avtomobil` klassini yarating.
+
+### Xususiyatlari:
+
+* brend
+* model
+* rang
+* narx
+* yil
+
+### Metodlar:
+
+```python
+malumot()
+```
+
+Natija:
+
+```
+Brend: BMW
+Model: X5
+Rang: Oq
+Narxi: 65000 $
+Yili: 2024
+```
+
+```python
+yoshi()
+```
+
+Natija:
+
+```
+BMW X5 2024-yilda ishlab chiqarilgan.
+```
+
+Kamida **5 ta avtomobil** yarating va har bir obyekt uchun ikkala metodni ham chaqiring.
+
+---
+
+# 2-mashq. Talaba
+
+`Talaba` klassini yarating.
+
+### Xususiyatlari:
+
+* ism
+* fakultet
+* kurs
+* GPA
+* stipendiya
+
+### Metodlar:
+
+```python
+tanishtir()
+```
+
+Natija:
+
+```
+Men Abdugani.
+Men Bojxona ishi fakultetida o'qiyman.
+```
+
+```python
+natija()
+```
+
+Natija:
+
+```
+GPA: 4.8
+Stipendiya: bor
+```
+
+Kamida **6 ta talaba** yarating va barcha metodlarni chaqiring.
+
+---
+
+# 3-mashq. Telefon
+
+`Telefon` klassi.
+
+### Xususiyatlari:
+
+* kompaniya
+* model
+* xotira
+* narx
+* rang
+
+### Metodlar:
+
+```python
+info()
+```
+
+Natija:
+
+```
+Apple
+iPhone 16 Pro Max
+256 GB
+Qora
+```
+
+```python
+narx_kor()
+```
+
+Natija:
+
+```
+Narxi: 18000000 so'm
+```
+
+5 ta telefon yarating.
+
+---
+
+# 4-mashq. Futbolchi
+
+`Futbolchi` klassi.
+
+### Xususiyatlari:
+
+* ism
+* jamoa
+* raqam
+* pozitsiya
+* yosh
+
+### Metodlar:
+
+```python
+tanishtir()
+```
+
+Natija:
+
+```
+Men Bobur.
+Real Madrid jamoasida o'ynayman.
+```
+
+```python
+forma()
+```
+
+Natija:
+
+```
+22-raqamli futbolchi.
+```
+
+Kamida **6 ta futbolchi** yarating.
+
+---
+
+# 5-mashq. Kitob
+
+`Kitob` klassi.
+
+### Xususiyatlari:
+
+* nomi
+* muallifi
+* sahifalar_soni
+* narxi
+* nashr_yili
+
+### Metodlar:
+
+```python
+malumot()
+```
+
+Natija:
+
+```
+Kitob: Ufq
+Muallif: Said Ahmad
+650 sahifa
+```
+
+```python
+narx()
+```
+
+Natija:
+
+```
+Narxi: 200000 so'm
+```
+
+Kamida **5 ta kitob** yarating.
+
+---
+
+# Mashqlarning maqsadi
+
+Har bir obyekt uchun metodlarni quyidagicha chaqirasiz:
+
+```python
+avto1.malumot()
+avto1.yoshi()
+
+talaba1.tanishtir()
+talaba1.natija()
+
+telefon1.info()
+telefon1.narx_kor()
+
+futbolchi1.tanishtir()
+futbolchi1.forma()
+
+kitob1.malumot()
+kitob1.narx()
+```
+
+---
+
+## Muhim qoida
+
+Bu 5 ta mashqda **faqat quyidagilarni ishlating**:
+
+* ✅ `class`
+* ✅ `__init__()`
+* ✅ `self`
+* ✅ `def` (metodlar)
+* ✅ `print()`
+* ✅ `obyekt.metod()`
+
+❌ Hozircha `for`, `if`, `max`, `min`, `filter`, `lambda` ishlatmang.
+
+Bu mashqlarni tugatganingizdan so'ng siz **obyekt metodlariga murojaat qilish** mavzusini to'liq o'zlashtirasiz va keyingi bosqich — **argument qabul qiluvchi metodlar**ni o'rganishga tayyor bo'lasiz.
