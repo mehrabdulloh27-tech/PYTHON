@@ -168,6 +168,39 @@ Narxi: 18000000 so'm
 5 ta telefon yarating.
 
 ---
+class Telefon:
+	def __init__(self,kompaniya,model,xotira,narx,rang):
+		self.kompaniya=kompaniya
+		self.model=model
+		self.xotira=xotira
+		self.narx=narx
+		self.rang=rang
+	def info(self):
+		print(f"""
+Kompaniya: {self.kompaniya}
+Model: {self.model}
+Xotira: {self.xotira}
+Rang: {self.rang}""")
+	def narx_tel(self):
+		print(f"""
+Nomi: {self.model}
+Narxi: {self.narx} $
+""")
+telefon1 = Telefon("Apple", "iPhone 15 Pro", "256GB", 1200, "Qora")
+telefon2 = Telefon("Samsung", "Galaxy S24 Ultra", "512GB", 1400, "Kulrang")
+telefon3 = Telefon("Xiaomi", "14 Ultra", "256GB", 1000, "Oq")
+telefon4 = Telefon("Google", "Pixel 9 Pro", "128GB", 1100, "Ko'k")
+telefon5 = Telefon("OnePlus", "12", "256GB", 900, "Yashil")
+telefon1.info()
+telefon1.narx_tel()
+telefon2.info()
+telefon2.narx_tel()
+telefon3.info()
+telefon3.narx_tel()
+telefon4.info()
+telefon4.narx_tel()
+telefon5.info()
+telefon5.narx_tel()
 
 # 4-mashq. Futbolchi
 
@@ -207,7 +240,37 @@ Natija:
 Kamida **6 ta futbolchi** yarating.
 
 ---
-
+class Futbolchi:
+	def __init__(self,ism,jamoa,raqam,pozitsiya,yosh):
+		self.ism=ism
+		self.jamoa=jamoa
+		self.raqam=raqam
+		self.pozitsiya=pozitsiya
+		self.yosh=yosh
+	def tanishtir(self):
+		print(f"""Meni ismim {self.ism}
+Men {self.jamoa} jamoasida o'ynayman""")
+	def forma(self):
+		print(f"""Men {self.raqam}-raqamli futbolchiman.
+""")
+futbolchi1 = Futbolchi("Lionel Messi", "Inter Miami", 10, "Hujumchi", 39)
+futbolchi2 = Futbolchi("Cristiano Ronaldo", "Al Nassr", 7, "Hujumchi", 41)
+futbolchi3 = Futbolchi("Kylian Mbappe", "Real Madrid", 9, "Hujumchi", 27)
+futbolchi4 = Futbolchi("Kevin De Bruyne", "Napoli", 17, "Yarim himoyachi", 35)
+futbolchi5 = Futbolchi("Virgil van Dijk", "Liverpool", 4, "Himoyachi", 35)
+futbolchi6 = Futbolchi("Gianluigi Donnarumma", "Paris Saint-Germain", 1, "Darvozabon", 27)
+futbolchi1.tanishtir()
+futbolchi1.forma()
+futbolchi2.tanishtir()
+futbolchi2.forma()
+futbolchi3.tanishtir()
+futbolchi3.forma()
+futbolchi4.tanishtir()
+futbolchi4.forma()
+futbolchi5.tanishtir()
+futbolchi5.forma()
+futbolchi6.tanishtir()
+futbolchi6.forma()
 # 5-mashq. Kitob
 
 `Kitob` klassi.
