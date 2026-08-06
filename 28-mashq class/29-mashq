@@ -1,0 +1,89 @@
+class Talaba:
+    def __init__(self,ism,familya,fakultet,tyil):
+        self.ism=ism
+        self.familya=familya
+        self.fakultet=fakultet
+        self.tyil=tyil
+        self.bosqich=1
+    def get_info(self):
+        return f"{self.ism} {self.familya} {self.fakultet} fafulteti,  {self.bosqich}-bosqichi talabasi {self.tyil}-yilda tug'ilgan"
+talaba1=Talaba("Abdug'ani","Teshaboyev","Bojxona ishi",2002)
+print(talaba1.get_info())
+
+class Talaba:
+    def __init__(self,ism,familya,fakultet,tyil):
+        self.ism=ism
+        self.familya=familya
+        self.fakultet=fakultet
+        self.tyil=tyil
+        self.bosqich=1
+    def get_info(self):
+        return f"{self.ism} {self.familya} {self.fakultet} fafulteti,  {self.bosqich}-bosqichi talabasi {self.tyil}-yilda tug'ilgan"
+    def set_bosqich(self,bosqich):
+        self.bosqich=bosqich
+talaba1=Talaba("Abdug'ani","Teshaboyev","Bojxona ishi",2002)
+talaba1.set_bosqich(200)
+print(talaba1.get_info())
+
+class Talaba:
+    def __init__(self,ism,familya,fakultet,tyil):
+        self.ism=ism
+        self.familya=familya
+        self.fakultet=fakultet
+        self.tyil=tyil
+        self.bosqich=1
+    def get_info(self):
+        return f"{self.ism} {self.familya} {self.fakultet} fafulteti,  {self.bosqich}-bosqichi talabasi {self.tyil}-yilda tug'ilgan"
+    def set_bosqich(self,bosqich):
+        self.bosqich=bosqich
+    def update_bosqich(self):
+        self.bosqich+=1
+talaba1=Talaba("Abdug'ani","Teshaboyev","Bojxona ishi",2002)
+print(talaba1.get_info())
+talaba1.update_bosqich()
+print(talaba1.get_info())
+talaba1.update_bosqich()
+print(talaba1.get_info())
+talaba1.update_bosqich()
+print(talaba1.get_info())
+talaba1.update_bosqich()
+print(talaba1.get_info())
+talaba1.update_bosqich()
+print(talaba1.get_info())
+
+class Talaba:
+    def __init__(self,ism,familya,fakultet,tyil):
+        self.ism=ism
+        self.familya=familya
+        self.fakultet=fakultet
+        self.tyil=tyil
+        self.bosqich=1
+    def get_info(self):
+        return f"{self.ism} {self.familya} {self.fakultet} fafulteti,  {self.bosqich}-bosqichi talabasi {self.tyil}-yilda tug'ilgan"
+    def set_bosqich(self,bosqich):
+        self.bosqich=bosqich
+    def update_bosqich(self):
+        self.bosqich+=1
+class Fan:
+    def __init__(self,nomi):
+        self.nomi=nomi
+        self.talabalar_soni=0
+        self.talabalar=[]
+    def add_student(self,talaba):
+        self.talabalar.append(talaba)
+        self.talabalar_soni+=1
+    def get_students(self):
+        return [talaba.get_info() for talaba in self.talabalar]
+matematika=Fan("Oliy matematika")
+talaba1=Talaba("Ali","Salimov","Bojxona ishi",2000)
+talaba2=Talaba("Abdug'ani","Teshaboyev","Bojxona huquqi",2002)
+talaba3=Talaba("Sardor","Omonov","Bojxona ish yevro",2003)
+matematika.add_student(talaba1)
+matematika.add_student(talaba2)
+matematika.add_student(talaba3)
+print(matematika.talabalar_soni)
+mat_talabalar=matematika.get_students()
+print(mat_talabalar)
+
+
+
