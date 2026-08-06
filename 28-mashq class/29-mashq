@@ -84,6 +84,139 @@ matematika.add_student(talaba3)
 print(matematika.talabalar_soni)
 mat_talabalar=matematika.get_students()
 print(mat_talabalar)
+Quyida **"Xususiyatlarga standart qiymat berish", "Standart qiymatni o'zgartirish" va "Obyektlar o'rtasida munosabat"** mavzularini mustahkamlash uchun 5 ta topshiriq keltirilgan. Topshiriqlar osondan murakkabga qarab tuzilgan.
+
+### 1-topshiriq. Standart qiymat berish
+
+`Kitob` nomli klass yarating.
+
+**Xususiyatlari:**
+
+* nomi
+* muallif
+* sahifalar_soni
+* **holati** (standart qiymati `"Mavjud"` bo'lsin)
+
+**Vazifa:**
+
+* `get_info()` metodini yozing.
+* 3 ta kitob obyekti yarating.
+* Hech birida `holati`ni qo'lda bermang.
+
+**Namuna natija:**
+
+```
+Python Asoslari - Anvar, Holati: Mavjud
+```
+
+---
+
+### 2-topshiriq. Standart qiymatni o'zgartirish
+
+Yuqoridagi `Kitob` klassiga quyidagi metodlarni qo'shing:
+
+* `ijaraga_ber()` → holatini `"Band"` ga o'zgartirsin.
+* `qaytarildi()` → holatini `"Mavjud"` ga o'zgartirsin.
+
+**Vazifa:**
+
+1. Kitobni yarating.
+2. Ma'lumotini chiqaring.
+3. `ijaraga_ber()` metodini chaqiring.
+4. Yana ma'lumotini chiqaring.
+
+---
+
+### 3-topshiriq. Obyektlar o'rtasida munosabat
+
+`Talaba` va `Fan` klasslarini yarating.
+
+**Talaba:**
+
+* ism
+* familiya
+
+**Fan:**
+
+* nomi
+* talabalar (bo'sh ro'yxat)
+
+**Metodlar:**
+
+* `add_student()`
+* `get_students()`
+
+**Vazifa:**
+
+* 4 ta talaba yarating.
+* Ularni bitta fanga qo'shing.
+* Fan ichidagi barcha talabalar ismlarini chiqaring.
+
+---
+
+### 4-topshiriq. Standart qiymat + munosabat
+
+`Kutubxona` klassini yarating.
+
+**Xususiyatlari:**
+
+* nomi
+* kitoblar (bo'sh ro'yxat)
+
+**Metodlar:**
+
+* `add_book()`
+* `remove_book()`
+* `book_count()`
+
+**Vazifa:**
+
+* 5 ta kitob yarating.
+* Kutubxonaga qo'shing.
+* 1 tasini o'chiring.
+* Oxirida nechta kitob qolganini chiqaring.
+
+---
+
+### 5-topshiriq. Murakkab topshiriq
+
+`Universitet` klassini yarating.
+
+**Xususiyatlari:**
+
+* nomi
+* fanlar (bo'sh ro'yxat)
+* talabalar (bo'sh ro'yxat)
+
+**Metodlar:**
+
+* `add_fan()`
+* `add_student()`
+* `student_count()`
+* `fan_count()`
+
+**Vazifa:**
+
+1. Universitet yarating.
+2. 3 ta fan yarating.
+3. 5 ta talaba yarating.
+4. Fanlarni universitetga qo'shing.
+5. Talabalarni universitetga qo'shing.
+6. Ekranga quyidagini chiqaring:
+
+```
+Universitet: TATU
+Fanlar soni: 3
+Talabalar soni: 5
+```
+
+Bu 5 ta topshiriq sizga:
+
+* `__init__` metodida standart qiymatlar berish,
+* obyekt xususiyatlarini metodlar orqali o'zgartirish,
+* bir klass obyektlarini boshqa klass ichida saqlash (obyektlar o'rtasidagi munosabat)
+
+mavzularini amalda mashq qilish imkonini beradi.
 
 
 
