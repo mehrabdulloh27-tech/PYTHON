@@ -152,6 +152,7 @@ Yuqoridagi `Kitob` klassiga quyidagi metodlarni qo'shing:
 * Ularni bitta fanga qo'shing.
 * Fan ichidagi barcha talabalar ismlarini chiqaring.
 
+
 ---
 
 ### 4-topshiriq. Standart qiymat + munosabat
@@ -175,6 +176,38 @@ Yuqoridagi `Kitob` klassiga quyidagi metodlarni qo'shing:
 * Kutubxonaga qo'shing.
 * 1 tasini o'chiring.
 * Oxirida nechta kitob qolganini chiqaring.
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+#print("Start small. Ship something.")
+class Kutubxona:
+    def __init__(self, nomi):
+        self.nomi = nomi
+        self.kitoblar = []
+        self.kitoblar_soni = 0
+
+    def add_book(self, *kitob):
+        self.kitoblar.extend(kitob)
+        self.kitoblar_soni += len(kitob)
+
+    def remove_book(self, kitob):
+        self.kitoblar.remove(kitob)
+        self.kitoblar_soni -= 1
+
+
+kutoblar = Kutubxona("Bilimdon")
+
+kitob1 = "Izlash"
+kitob2 = "Faryod"
+kitob3 = "Taqib"
+kitob4 = "Adolat"
+kitob5 = "Ishq"
+
+kutoblar.add_book(kitob1, kitob2, kitob3, kitob4, kitob5)
+
+kutoblar.remove_book(kitob1)
+
+print(f"Kutubxonada qolgan kitoblar: {kutoblar.kitoblar}")
+print(f"Qoldiq kitoblar soni: {kutoblar.kitoblar_soni}")
 
 ---
 
@@ -209,6 +242,40 @@ Universitet: TATU
 Fanlar soni: 3
 Talabalar soni: 5
 ```
+class Universitet:
+    def __init__(self,nomi):
+        self.nomi=nomi
+        self.fanlar=[]
+        self.talabalar=[]
+        self.fan_count=0
+        self.talaba_count=0
+    def add_fan(self,fan):
+        self.fanlar.append(fan)
+        self.fan_count+=1
+    def add_talaba(self,talaba):
+        self.talabalar.append(talaba)
+        self.talaba_count+=1
+fan1="Matematika"
+fan2="English"
+fan3="Programmar"
+talaba1="Abdug'ani"
+talaba2="Barno"
+talaba3="Ramazon"
+talaba4="Sardor"
+talaba5="Doniyor"
+uqish=Universitet("Amazon")
+uqish.add_fan(fan1)
+uqish.add_fan(fan2)
+uqish.add_fan(fan3)
+uqish.add_talaba(talaba1)
+uqish.add_talaba(talaba2)
+uqish.add_talaba(talaba3)
+uqish.add_talaba(talaba4)
+uqish.add_talaba(talaba5)
+
+print(f"""Universitet: {uqish.nomi}
+Fanlar soni: {uqish.fan_count}
+Talabalar soni: {uqish.talaba_count}""")
 
 Bu 5 ta topshiriq sizga:
 
@@ -217,6 +284,7 @@ Bu 5 ta topshiriq sizga:
 * bir klass obyektlarini boshqa klass ichida saqlash (obyektlar o'rtasidagi munosabat)
 
 mavzularini amalda mashq qilish imkonini beradi.
+
 
 
 
