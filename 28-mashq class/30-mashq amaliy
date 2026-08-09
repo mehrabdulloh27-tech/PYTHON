@@ -140,3 +140,51 @@ super().show_info()
 ```
 
 Shu 5 tasini ishlab ko‘rsangiz, `super()`ning **konstruktor va metod bilan ishlatilishini** ancha yaxshi tushunib olasiz.
+1. 
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def show(self):
+        print("Ism:",self.name)
+        print("Yoshi:",self.age)
+class Student(Person):
+    def __init__(self,name,age,grade):
+        super().__init__(name,age)
+        self.grade=grade
+    def show_student(self):
+        super().show()
+        print("Sinf:",self.grade)
+student=Student("Abdug'ani",24,4)
+student.show_student()
+2.
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    def show(self):
+        print("Laqabi:",self.name)
+class Dog(Animal):
+    def __init__(self,name,breed):
+        self.breed=breed
+        super().__init__(name)
+    def show_dog(self):
+        super().show()
+        print("Zoti:",self.breed)
+dog=Dog("Simba","Abcharka")
+dog.show_dog()
+3. 
+class Car:
+    def __init__(self,brend,color):
+        self.brend=brend
+        self.color=color
+class BMW(Car):
+    def __init__(self,model,brend,color):
+        self.model=model
+        super().__init__(brend,color)
+    def show(self):
+        print("Model:",self.model)
+        print("Brend:",self.brend)
+        print("Color:",self.color)
+mashina=BMW("Toyota","Land Cruiser","Qora")
+mashina.show()
+
