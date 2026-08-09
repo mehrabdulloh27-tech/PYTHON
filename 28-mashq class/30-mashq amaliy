@@ -1,0 +1,142 @@
+Albatta. **5-misoldagi `Person` va `Student` kabi tuzilma** asosida, `super()`ni o‘zingiz ishlatib ko‘rishingiz uchun 5 ta topshiriq:
+
+### 1-topshiriq — Person va Student
+
+`Person` klassini yarating:
+
+* `name` va `age` atributlari bo‘lsin.
+* `__init__()` orqali qiymat olsin.
+* `show()` metodi ism va yoshni chiqarsin.
+
+`Student(Person)` klassini yarating:
+
+* `grade` atributi bo‘lsin.
+* `super().__init__()` orqali `name` va `age`ni ota klassga yuboring.
+* `show_student()` metodi ism, yosh va sinfni chiqarsin.
+
+---
+
+### 2-topshiriq — Animal va Dog
+
+`Animal` klassida:
+
+* `name` atributi;
+* `__init__()` konstruktori;
+* `show()` metodi bo‘lsin.
+
+`Dog(Animal)` yarating:
+
+* `breed` atributi bo‘lsin.
+* `super().__init__()` yordamida `name`ni o‘rnating.
+* `show_dog()` orqali itning nomi va zotini chiqaring.
+
+Masalan:
+
+```text
+Nom: Rex
+Zot: German Shepherd
+```
+
+---
+
+### 3-topshiriq — Car va BMW
+
+`Car` klassini yarating:
+
+* `brand`
+* `color`
+
+`BMW(Car)` klassini yarating:
+
+* `model` atributi bo‘lsin.
+* `super().__init__()` orqali `brand` va `color`ni o‘rnating.
+* `show()` metodi barcha ma'lumotlarni chiqarsin.
+
+Natija taxminan:
+
+```text
+Marka: BMW
+Rang: Qora
+Model: M5
+```
+
+---
+
+### 4-topshiriq — Employee va Developer
+
+`Employee` klassida:
+
+* `name`
+* `salary`
+
+bo‘lsin.
+
+`Developer(Employee)` klassida:
+
+* `programming_language`
+
+bo‘lsin.
+
+**Shart:** `Developer` konstruktorida `super().__init__()` ishlating.
+
+`show_info()` metodi quyidagicha ma'lumot chiqarsin:
+
+```text
+Ism: Ali
+Maosh: 8000000
+Dasturlash tili: Python
+```
+
+---
+
+### 5-topshiriq — Eng muhim topshiriq 🔥
+
+Quyidagi klasslarni o‘zingiz yarating:
+
+```text
+Person
+   ↓
+Teacher
+```
+
+`Person`:
+
+* `name`
+* `age`
+
+`Teacher`:
+
+* `subject`
+* `experience`
+
+**Talablar:**
+
+1. `Teacher` `Person`dan voris olsin.
+2. `Teacher`ning `__init__()`ida `super().__init__()` ishlatilsin.
+3. `Person`da `show_info()` metodi bo‘lsin.
+4. `Teacher`da ham `show_info()` bo‘lsin.
+5. `Teacher`dagi `show_info()` ichida **`super().show_info()`** ishlatilsin.
+6. Oxirida obyekt yaratib, barcha ma'lumotlarni ekranga chiqaring.
+
+Kutilgan natija:
+
+```text
+Ism: Anvar
+Yosh: 35
+Fan: Informatika
+Tajriba: 10 yil
+```
+
+**Maslahat:** 5-topshiriqda aynan ikkita `super()` ishlatishga harakat qiling:
+
+```python
+super().__init__(...)
+```
+
+va
+
+```python
+super().show_info()
+```
+
+Shu 5 tasini ishlab ko‘rsangiz, `super()`ning **konstruktor va metod bilan ishlatilishini** ancha yaxshi tushunib olasiz.
