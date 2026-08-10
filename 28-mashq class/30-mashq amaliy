@@ -136,7 +136,130 @@ super().__init__(...)
 va
 
 ```python
-super().show_info()
+super().show_info() 
+Albatta. **“Obyekt ichida obyekt”** mavzusini mustahkamlash uchun osondan qiyinga qarab 3 ta mashq:
+
+### 1-mashq — Avtomobil va uning egasi 🚗
+
+`Avtomobil` klassini yarating:
+
+**Xususiyatlari:**
+
+* `model`
+* `rang`
+* `narx`
+* `egasi`
+
+`Egasi` esa alohida `Shaxs` klassining obyekti bo‘lsin.
+
+Masalan:
+
+```text
+Shaxs("Abdugani", 24)
+Avtomobil("BMW X5", "qora", 65000, egasi)
+```
+
+**Vazifa:**
+
+1. Avtomobil haqida ma'lumot chiqaring.
+2. Egasi ismini chiqaring.
+3. Egasi yoshini chiqaring.
+
+Natija taxminan:
+
+```text
+Avtomobil: BMW X5
+Rang: qora
+Narx: 65000 $
+Egasi: Abdugani
+Yoshi: 24
+```
+
+---
+
+### 2-mashq — Universitet va talabalar 🎓
+
+`Talaba` klassini yarating:
+
+**Xususiyatlari:**
+
+* `ism`
+* `kurs`
+* `GPA`
+
+`Universitet` klassini yarating:
+
+**Xususiyatlari:**
+
+* `nomi`
+* `manzil`
+* `talaba`
+
+Bu yerda `talaba` — **Talaba klassidan yaratilgan obyekt** bo‘lsin.
+
+Kamida **3 ta Talaba obyekti** yarating va ularni alohida Universitet obyektlariga joylashtiring.
+
+**Vazifa:**
+
+```text
+Universitet: Toshkent universiteti
+Manzil: Toshkent
+
+Talaba: Abdugani
+Kurs: 4
+GPA: 4.7
+```
+
+---
+
+### 3-mashq — Telefon, kompaniya va protsessor 📱
+
+Bu mashq biroz qiyinroq.
+
+3 ta klass yarating:
+
+#### `Kompaniya`
+
+* `nomi`
+* `davlati`
+
+#### `Protsessor`
+
+* `nomi`
+* `yadrolar`
+* `chastota`
+
+#### `Telefon`
+
+* `model`
+* `narx`
+* `kompaniya`
+* `protsessor`
+
+`Telefon` ichida **Kompaniya obyekti** va **Protsessor obyekti** bo‘lsin.
+
+Masalan:
+
+```text
+Kompaniya → Apple
+Protsessor → A19 Pro
+Telefon → iPhone 17 Pro Max
+```
+
+**Vazifa:** quyidagi ma'lumotlarni chiqaring:
+
+```text
+Telefon: iPhone 17 Pro Max
+Narx: 1500 $
+Kompaniya: Apple
+Davlat: AQSH
+Protsessor: A19 Pro
+Yadrolar: 6
+Chastota: 4.0 GHz
+```
+
+**Muhim:** 3-mashqda `telefon.kompaniya.nomi` va `telefon.protsessor.nomi` kabi murojaat qilishni o‘rganasiz. Bu aynan **obyekt ichida obyekt**ning asosiy mazmuni.
+
 ```
 
 Shu 5 tasini ishlab ko‘rsangiz, `super()`ning **konstruktor va metod bilan ishlatilishini** ancha yaxshi tushunib olasiz.
@@ -202,3 +325,48 @@ class Developer(Employee):
         print("Dasturlash tili:",self.programming_language)
 kampaniya=Developer("Abdug'ani",13000000,"Python")
 kampaniya.show_info()
+# class Shaxs:
+# 	def __init__(self,ism,familya):
+# 		self.ism=ism
+# 		self.familya=familya
+# 	def get_info(self):
+# 		info_egasi=f"Ism: {self.ism}"
+# 		info_egasi+=f"\nFamilya: {self.familya}"
+# 		return info_egasi
+# class Avtommobil:
+# 	def __init__(self,model,rang,narx,info_egasi):
+# 		self.model=model
+# 		self.rang=rang
+# 		self.narx=narx
+# 		self.info_egasi=info_egasi
+# 	def get_info(self):
+# 		info=f"Model: {self.model}"
+# 		info+=f"\nRang: {self.rang}"
+# 		info+=f"\nNarx: {self.narx}"
+# 		return info
+# egasi=Shaxs("Abdug'ani","Teshaboyev")
+# avto=Avtommobil("Toyoto","Oq",25000,egasi)
+# print(avto.info_egasi.get_info())
+# print(avto.get_info())
+class Talaba:
+	def __init__(self,ism,kurs,GPA):
+		self.ism=ism
+		self.kurs=kurs
+		self.GPA=GPA
+	def get_info(self):
+		talaba=f"Ism: {self.ism}"
+		talaba+=f"\nKurs: {self.kurs}"
+		talaba+=f"\nGPA: {self.GPA}"
+		return talaba
+class Universitet:
+	def __init__(self,nomi,manzil,talaba):
+		self.nomi=nomi
+		self.manzil=manzil
+		self.talaba=talaba
+		def get_info(self):
+			universitet_info=f"Nomi: {self.nomi}"
+			universitet_info+=f"\nManzili: {self.manzil}"
+			return universitet_info
+talaba_info=Talaba("Abdug'ani",4,4.7)
+univer=Universitet("Kelajak sar","Toshkent shahar chilonzor tumani",talaba_info)
+print(univer.talaba.get_info())
