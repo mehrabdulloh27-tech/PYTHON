@@ -370,3 +370,43 @@ class Universitet:
 talaba_info=Talaba("Abdug'ani",4,4.7)
 univer=Universitet("Kelajak sar","Toshkent shahar chilonzor tumani",talaba_info)
 print(univer.talaba.get_info())
+class Kompaniya:
+    def __init__(self,nomi,davlati):
+        self.nomi=nomi
+        self.davlati=davlati
+    def get_info(self):
+        kom=f"\nNomi: {self.nomi}"
+        kom+=f"\nDavlati: {self.davlati}"
+        return kom
+komp=Kompaniya("Apple","Amerika")
+class Protsessor:
+    def __init__(self,nomi,yadrolar,chastota):
+        self.nomi=nomi
+        self.yadrolar=yadrolar
+        self.chastota==chastota
+    def get_info(self):
+        prot=f"\nNomi: {self.nomi}"
+        prot+=f"\Yadrolar: {self.yadrolar}"
+        return prot
+prots=Protsessor("A20 pro max",8,4 GHz)
+class Telefon:
+    def __init__(self,model,narx,
+    kompaniya,protsessor,kom,prot):
+        self.model=model
+        self.narx=narx
+        self.kompaniya=kompaniya
+        self.protsessor=protsessor
+        self.kom=kom
+        self.prot=prot
+    def get_info(self):
+        tel=f"Model: {self.model}"
+        tel+=f"Narx: {self.narx}"
+        tel+=f"Kompaniya: {self.kompaniya}"
+        tel+=f"Protsessor: {self.protsessor}"
+        return tel
+tele=Telefon("")
+    
+    
+    
+    
+    
