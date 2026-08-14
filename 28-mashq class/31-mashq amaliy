@@ -1,0 +1,54 @@
+Albatta. Quyida **kodsiz**, faqat mashq shartlari berilgan.
+
+### 1-mashq — Talaba klassi
+
+`Student` nomli klass yarating.
+
+* Talabaning ismi, familiyasi va yoshi bo‘lsin.
+* Yosh xususiyatini inkapsulyatsiya qiling.
+* Yoshni ko‘rish uchun alohida metod yarating.
+* Yoshni o‘zgartirish uchun alohida metod yarating.
+* Yosh manfiy son bo‘lishiga yo‘l qo‘ymang.
+
+### 2-mashq — Bank hisob raqami
+
+`BankAccount` nomli klass yarating.
+
+* Hisob egasi va balans xususiyatlari bo‘lsin.
+* Balansni inkapsulyatsiya qiling.
+* Hisobga pul qo‘shish metodini yarating.
+* Hisobdan pul yechish metodini yarating.
+* Balansdagi puldan ko‘proq pul yechishga ruxsat berilmasin.
+* Balansni ko‘rish uchun alohida metod bo‘lsin.
+
+### 3-mashq — Avtomobil klassi
+
+`Avto` nomli klass yarating.
+
+* Avtomobilning markasi, modeli, rangi, narxi va ishlab chiqarilgan yili bo‘lsin.
+* Narx xususiyatini inkapsulyatsiya qiling.
+* Narxni ko‘rish va o‘zgartirish uchun metodlar yarating.
+* Narx manfiy bo‘lishiga yo‘l qo‘ymang.
+* Nechta avtomobil yaratilganini hisoblovchi klass xususiyati yarating.
+
+### 4-mashq — Xodim klassi
+
+`Employee` nomli klass yarating.
+
+* Xodimning ismi, lavozimi va oyligi bo‘lsin.
+* Oylik maoshni inkapsulyatsiya qiling.
+* Oylikni ko‘rish va o‘zgartirish uchun metodlar yarating.
+* Oylik ma’lum miqdordan kam bo‘lsa, uni qabul qilmasin.
+* Xodim haqida barcha ma’lumotlarni chiqaruvchi metod yarating.
+
+### 5-mashq — Mahsulot klassi
+
+`Product` nomli klass yarating.
+
+* Mahsulotning nomi, narxi va ombordagi miqdori bo‘lsin.
+* Narx va miqdorni inkapsulyatsiya qiling.
+* Narxni ko‘rish va o‘zgartirish imkoniyati bo‘lsin.
+* Omborga mahsulot qo‘shish imkoniyati bo‘lsin.
+* Mahsulot sotilganda miqdor kamayishi kerak.
+* Omborda mavjud mahsulotdan ko‘proq sotishga ruxsat berilmasin.
+* Mahsulot haqida ma’lumot beruvchi metod yarating.
