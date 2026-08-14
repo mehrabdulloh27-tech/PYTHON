@@ -52,3 +52,57 @@ Albatta. Quyida **kodsiz**, faqat mashq shartlari berilgan.
 * Mahsulot sotilganda miqdor kamayishi kerak.
 * Omborda mavjud mahsulotdan ko‘proq sotishga ruxsat berilmasin.
 * Mahsulot haqida ma’lumot beruvchi metod yarating.
+
+
+# # Online Python - IDE, Editor, Compiler, Interpreter
+
+# def sum(a, b):
+#     return (a + b)
+
+# a = int(input('Enter 1st number: '))
+# b = int(input('Enter 2nd number: '))
+
+# print(f'Sum of {a} and {b} is {sum(a, b)}')
+# class Avto:
+#     num_avto=0
+#     def __init__(self,make,model,rang,narx,yil,km=0):
+#         self.make=make
+#         self.model=model
+#         self.rang=rang
+#         self.narx=narx
+#         self.yil=yil
+#         self.__km=km
+#         Avto.num_avto+=1
+# avto1=Avto("GM","Spark","Oq",8000,2023)
+# avto2=Avto("Toyoto","lexsues","Sariq",120000,2025)
+# print(Avto.num_avto)
+# avto3=Avto("KIA","K5","Qora",20000,2026)
+# print(avto2.num_avto)
+class Avto:
+    __num_avto=0
+    def __init__(self,make,model,rang,narx,yil,km=0):
+        self.make=make
+        self.model=model
+        self.rang=rang
+        self.narx=narx
+        self.yil=yil
+        self.__km=km
+        Avto.__num_avto+=1
+    @classmethod
+    def get_num_avto(cls):
+        return cls.__num_avto
+    def get_km(self):
+        return self.__km
+    def add_km(self,km):
+        if km>=0:
+            self.__km+=km
+        else:
+            print("km qo'shib o'lmaydi")
+        
+avto1=Avto("GM","Spark","Oq",8000,2023,15000)
+avto2=Avto("Toyoto","lexsues","Sariq",120000,2025,25000)
+print(Avto.get_num_avto())
+avto3=Avto("KIA","K5","Qora",20000,2026,50000)
+print(Avto.get_num_avto())
+avto3.add_km(1000)
+print(avto3.get_km())
