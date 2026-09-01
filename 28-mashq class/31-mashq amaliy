@@ -106,3 +106,33 @@ avto3=Avto("KIA","K5","Qora",20000,2026,50000)
 print(Avto.get_num_avto())
 avto3.add_km(1000)
 print(avto3.get_km())
+
+class Avto:
+    __num_avto=0
+    def __init__(self,make,model,rang,yil,narx):
+        self.make=make
+        self.model=model
+        self.rang=rang
+        self.yil=yil
+        self.narx=narx
+        Avto.__num_avto+=1
+    def __repr__(self):
+        return (f"Avto make: {self.make} Avto model: {self.model}"
+               f"Avto rang: {self.rang} Avto yil: {self.yil}"
+               f"Avto narx: {self.narx}")
+    def __lt__(self,boshqa_avto):
+        return self.narx<boshqa_avto.narx
+    def __eq__(self,boshqa_avto):
+        return self.narx==boshqa_avto.narx
+    def __le__(self,boshqa_avto):
+        return self.narx<=boshqa_avto.narx
+avto1=Avto("GM","Equnox","Qora",2025,35000)
+avto2=Avto("Hundai","k5","Qizil",2025,40000)
+avto3=Avto("Toyoto","Landcruiser","Qora",2024,35000)
+print(avto1==avto3)
+print(avto1<avto2)
+print(avto3<avto2)
+print(avto1==avto2)
+print(avto1)
+print(avto2)
+print(avto3)
