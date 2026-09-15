@@ -1,0 +1,73 @@
+OBYEKT HAQIDA MA'LUMOT mavzusidan 3 ta mashqni pythonda kod yozishni o'rganish uchun class
+Albatta. **“Obyekt haqida ma’lumot”** mavzusida, aynan `class`, `__init__()`, `__repr__()` va obyektlardan foydalanishni mashq qilish uchun **3 ta turli darajadagi topshiriq** beraman. Kodini yozib bermayman.
+
+### 🟢 1-mashq — Telefon
+
+`Telefon` nomli klass yarating.
+
+Klass quyidagi xususiyatlarga ega bo‘lsin:
+
+* `brend`
+* `model`
+* `rang`
+* `xotira`
+* `narx`
+
+`__repr__()` metodi orqali obyekt haqida quyidagi mazmunda ma’lumot qaytaring:
+
+> Telefon: qora Samsung Galaxy S24, 256GB, 900$
+
+**Vazifa:** kamida 3 ta turli telefon obyektini yarating va ularni `print()` orqali ekranga chiqaring.
+
+---
+
+### 🟡 2-mashq — Kitob
+
+`Kitob` nomli klass yarating.
+
+Klass xususiyatlari:
+
+* `nomi`
+* `muallif`
+* `janr`
+* `yil`
+* `narx`
+
+`__repr__()` metodi obyekt haqida tushunarli ma’lumot qaytarsin.
+
+Masalan, ekranda taxminan:
+
+> Kitob: “O‘tkan kunlar” — Abdulla Qodiriy, tarixiy roman, 1926-yil
+
+**Vazifa:** 4 ta turli kitob obyektini yarating va har birini `print()` qiling.
+
+---
+
+### 🔴 3-mashq — Avtosalon
+
+`AvtoSalon` nomli klass yarating.
+
+Klassda:
+
+* `nomi`
+* `manzil`
+* `avtolar_soni`
+
+xususiyatlari bo‘lsin.
+
+Bundan tashqari, klassda **avtosalon obyektlari sonini hisoblab boradigan class o‘zgaruvchi** yarating.
+
+`__repr__()` metodi orqali avtosalon haqida ma’lumot chiqaring.
+
+Masalan:
+
+> Avtosalon: “Ishonch Auto”, Toshkent, 25 ta avtomobil
+
+**Vazifa:**
+
+1. 3 ta `AvtoSalon` obyektini yarating.
+2. Har bir obyektni `print()` qiling.
+3. Yaratilgan obyektlar sonini class o‘zgaruvchisi orqali aniqlang.
+4. Natijada **3 ta obyekt yaratilganini** ko‘rsating.
+
+**Muhim:** 3-mashqda berilgan `Avto` misolidagi `__num_avto` kabi **class o‘zgaruvchi + `__init__()` + `__repr__()`** tushunchalarini o‘zingiz qo‘llashga harakat qiling.
